@@ -54,6 +54,18 @@ ament_target_dependencies(sllidar_node
 )
 
 ################################################################################
+# Install
+################################################################################
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
+install(
+  TARGETS sllidar_node
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
+)
+
+################################################################################
 # Macro for ament package
 ################################################################################
 ament_export_dependencies(rclcpp)

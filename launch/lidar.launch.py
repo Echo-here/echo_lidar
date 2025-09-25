@@ -22,7 +22,7 @@ def generate_launch_description():
             description='Specifying usb port to connected lidar'),
 
         Node(
-            package='sllidar_ros2',
+            package='echo_lidar',
             executable='sllidar_node',
             name='sllidar_node',
             parameters=[{
