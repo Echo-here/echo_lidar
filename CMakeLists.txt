@@ -2,7 +2,7 @@
 # Set minimum required version of cmake, project name and compile options
 ################################################################################
 cmake_minimum_required(VERSION 3.5)
-project(sllidar_ros2)
+project(echo_lidar)
 
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
@@ -51,24 +51,6 @@ ament_target_dependencies(sllidar_node
   rclcpp
   std_srvs
   sensor_msgs
-)
-
-add_executable(sllidar_client src/sllidar_client.cpp)
-ament_target_dependencies(sllidar_client
-  rclcpp
-  std_srvs
-  sensor_msgs
-)
-################################################################################
-# Install
-################################################################################
-install(DIRECTORY launch rviz
-  DESTINATION share/${PROJECT_NAME}
-)
-
-install(
-  TARGETS sllidar_node sllidar_client
-  RUNTIME DESTINATION lib/${PROJECT_NAME}
 )
 
 ################################################################################
