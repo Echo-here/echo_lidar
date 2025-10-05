@@ -10,7 +10,7 @@ def generate_launch_description():
 
     channel_type = 'serial'
     serial_baudrate = 460800
-    frame_id = 'laser'
+    frame_id = 'laser_frame'
     inverted = False
     angle_compensate = True
     scan_mode = 'Standard'
