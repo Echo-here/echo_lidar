@@ -10,7 +10,7 @@ def generate_launch_description():
 
     channel_type = 'serial'
     serial_baudrate = 460800
-    frame_id = 'laser_frame'
+    frame_id = 'laser'
     inverted = False
     angle_compensate = True
     scan_mode = 'Standard'
@@ -35,4 +35,15 @@ def generate_launch_description():
                 'scan_mode': scan_mode
             }],
             output='screen'),
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='lidar_tf_pub',
+            arguments=[
+                '0', '0', '0.2',   # x, y, z (라이다 위치)
+                '0', '0', '0',     # roll, pitch, yaw
+                'base_link', 'laser'  # 부모, 자식 프레임
+            ]
+        ),
+
     ])
