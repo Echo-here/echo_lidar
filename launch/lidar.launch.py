@@ -42,7 +42,7 @@ def generate_launch_description():
             arguments=[
                 '0', '0', '0.2',   # x, y, z (라이다 위치)
                 '0', '0', '0',     # roll, pitch, yaw
-                'base_link', 'laser'  # 부모, 자식 프레임
+                'base_link', frame_id  # 부모, 자식 프레임
             ]
         ),
 
