@@ -33,7 +33,7 @@ def generate_launch_description():
                 'inverted': inverted,
                 'angle_compensate': angle_compensate,
                 'scan_mode': scan_mode,
-                'scan_frequency': 50
+                'scan_frequency': 50.0
             }],
             output='screen')
         # Node(
